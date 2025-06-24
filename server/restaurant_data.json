@@ -1,0 +1,1172 @@
+[
+  {
+    "name": "Biryani Junction",
+    "category": "Biryani",
+    "location": "Jasminbury",
+    "image": "https://source.unsplash.com/featured/?sweet",
+    "menu": [
+      {
+        "name": "Suggest Biryani",
+        "price": 274,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Biryani",
+        "restaurant": "Biryani Junction"
+      },
+      {
+        "name": "Send Biryani",
+        "price": 223,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Biryani",
+        "restaurant": "Biryani Junction"
+      },
+      {
+        "name": "After Biryani",
+        "price": 237,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Biryani",
+        "restaurant": "Biryani Junction"
+      },
+      {
+        "name": "Industry Biryani",
+        "price": 325,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Biryani",
+        "restaurant": "Biryani Junction"
+      },
+      {
+        "name": "Relationship Biryani",
+        "price": 267,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Biryani",
+        "restaurant": "Biryani Junction"
+      },
+      {
+        "name": "Order Biryani",
+        "price": 189,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Biryani",
+        "restaurant": "Biryani Junction"
+      },
+      {
+        "name": "Song Biryani",
+        "price": 343,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Biryani",
+        "restaurant": "Biryani Junction"
+      },
+      {
+        "name": "Social Biryani",
+        "price": 262,
+        "image": "https://source.unsplash.com/featured/?milkshake",
+        "category": "Biryani",
+        "restaurant": "Biryani Junction"
+      },
+      {
+        "name": "Mean Biryani",
+        "price": 299,
+        "image": "https://source.unsplash.com/featured/?burger",
+        "category": "Biryani",
+        "restaurant": "Biryani Junction"
+      },
+      {
+        "name": "Hand Biryani",
+        "price": 174,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Biryani",
+        "restaurant": "Biryani Junction"
+      }
+    ]
+  },
+  {
+    "name": "Hyderabadi Zaika",
+    "category": "Biryani",
+    "location": "New Jimmy",
+    "image": "https://source.unsplash.com/featured/?sweet",
+    "menu": [
+      {
+        "name": "Left Biryani",
+        "price": 135,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Biryani",
+        "restaurant": "Hyderabadi Zaika"
+      },
+      {
+        "name": "Course Biryani",
+        "price": 305,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Biryani",
+        "restaurant": "Hyderabadi Zaika"
+      },
+      {
+        "name": "Drug Biryani",
+        "price": 202,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Biryani",
+        "restaurant": "Hyderabadi Zaika"
+      },
+      {
+        "name": "Security Biryani",
+        "price": 190,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Biryani",
+        "restaurant": "Hyderabadi Zaika"
+      },
+      {
+        "name": "Everything Biryani",
+        "price": 254,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Biryani",
+        "restaurant": "Hyderabadi Zaika"
+      },
+      {
+        "name": "Management Biryani",
+        "price": 209,
+        "image": "https://source.unsplash.com/featured/?dessert",
+        "category": "Biryani",
+        "restaurant": "Hyderabadi Zaika"
+      },
+      {
+        "name": "Act Biryani",
+        "price": 270,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Biryani",
+        "restaurant": "Hyderabadi Zaika"
+      },
+      {
+        "name": "Near Biryani",
+        "price": 257,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Biryani",
+        "restaurant": "Hyderabadi Zaika"
+      },
+      {
+        "name": "Return Biryani",
+        "price": 172,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Biryani",
+        "restaurant": "Hyderabadi Zaika"
+      },
+      {
+        "name": "Focus Biryani",
+        "price": 261,
+        "image": "https://source.unsplash.com/featured/?milkshake",
+        "category": "Biryani",
+        "restaurant": "Hyderabadi Zaika"
+      }
+    ]
+  },
+  {
+    "name": "South Spice",
+    "category": "Tiffins",
+    "location": "Ashleyhaven",
+    "image": "https://source.unsplash.com/featured/?tiffin",
+    "menu": [
+      {
+        "name": "Responsibility Tiffins",
+        "price": 137,
+        "image": "https://source.unsplash.com/featured/?dessert",
+        "category": "Tiffins",
+        "restaurant": "South Spice"
+      },
+      {
+        "name": "Government Tiffins",
+        "price": 263,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Tiffins",
+        "restaurant": "South Spice"
+      },
+      {
+        "name": "Have Tiffins",
+        "price": 171,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Tiffins",
+        "restaurant": "South Spice"
+      },
+      {
+        "name": "Sell Tiffins",
+        "price": 349,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Tiffins",
+        "restaurant": "South Spice"
+      },
+      {
+        "name": "See Tiffins",
+        "price": 209,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Tiffins",
+        "restaurant": "South Spice"
+      },
+      {
+        "name": "Door Tiffins",
+        "price": 153,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Tiffins",
+        "restaurant": "South Spice"
+      },
+      {
+        "name": "Hot Tiffins",
+        "price": 178,
+        "image": "https://source.unsplash.com/featured/?burger",
+        "category": "Tiffins",
+        "restaurant": "South Spice"
+      },
+      {
+        "name": "Art Tiffins",
+        "price": 125,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Tiffins",
+        "restaurant": "South Spice"
+      },
+      {
+        "name": "Loss Tiffins",
+        "price": 268,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Tiffins",
+        "restaurant": "South Spice"
+      },
+      {
+        "name": "National Tiffins",
+        "price": 324,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Tiffins",
+        "restaurant": "South Spice"
+      }
+    ]
+  },
+  {
+    "name": "Tiffin Treats",
+    "category": "Tiffins",
+    "location": "Christopherfurt",
+    "image": "https://source.unsplash.com/featured/?icecream",
+    "menu": [
+      {
+        "name": "Also Tiffins",
+        "price": 208,
+        "image": "https://source.unsplash.com/featured/?burger",
+        "category": "Tiffins",
+        "restaurant": "Tiffin Treats"
+      },
+      {
+        "name": "Feel Tiffins",
+        "price": 328,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Tiffins",
+        "restaurant": "Tiffin Treats"
+      },
+      {
+        "name": "Animal Tiffins",
+        "price": 208,
+        "image": "https://source.unsplash.com/featured/?fastfood",
+        "category": "Tiffins",
+        "restaurant": "Tiffin Treats"
+      },
+      {
+        "name": "Upon Tiffins",
+        "price": 347,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Tiffins",
+        "restaurant": "Tiffin Treats"
+      },
+      {
+        "name": "Civil Tiffins",
+        "price": 206,
+        "image": "https://source.unsplash.com/featured/?snacks",
+        "category": "Tiffins",
+        "restaurant": "Tiffin Treats"
+      },
+      {
+        "name": "Any Tiffins",
+        "price": 189,
+        "image": "https://source.unsplash.com/featured/?fastfood",
+        "category": "Tiffins",
+        "restaurant": "Tiffin Treats"
+      },
+      {
+        "name": "Conference Tiffins",
+        "price": 316,
+        "image": "https://source.unsplash.com/featured/?fastfood",
+        "category": "Tiffins",
+        "restaurant": "Tiffin Treats"
+      },
+      {
+        "name": "Affect Tiffins",
+        "price": 142,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Tiffins",
+        "restaurant": "Tiffin Treats"
+      },
+      {
+        "name": "Deep Tiffins",
+        "price": 319,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Tiffins",
+        "restaurant": "Tiffin Treats"
+      },
+      {
+        "name": "Strategy Tiffins",
+        "price": 211,
+        "image": "https://source.unsplash.com/featured/?dessert",
+        "category": "Tiffins",
+        "restaurant": "Tiffin Treats"
+      }
+    ]
+  },
+  {
+    "name": "Snack Attack",
+    "category": "Snacks",
+    "location": "Nelsonville",
+    "image": "https://source.unsplash.com/featured/?dessert",
+    "menu": [
+      {
+        "name": "Down Snacks",
+        "price": 272,
+        "image": "https://source.unsplash.com/featured/?milkshake",
+        "category": "Snacks",
+        "restaurant": "Snack Attack"
+      },
+      {
+        "name": "Light Snacks",
+        "price": 140,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Snacks",
+        "restaurant": "Snack Attack"
+      },
+      {
+        "name": "Program Snacks",
+        "price": 246,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Snacks",
+        "restaurant": "Snack Attack"
+      },
+      {
+        "name": "Minute Snacks",
+        "price": 184,
+        "image": "https://source.unsplash.com/featured/?dessert",
+        "category": "Snacks",
+        "restaurant": "Snack Attack"
+      },
+      {
+        "name": "Sing Snacks",
+        "price": 326,
+        "image": "https://source.unsplash.com/featured/?milkshake",
+        "category": "Snacks",
+        "restaurant": "Snack Attack"
+      },
+      {
+        "name": "Although Snacks",
+        "price": 298,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Snacks",
+        "restaurant": "Snack Attack"
+      },
+      {
+        "name": "Fund Snacks",
+        "price": 200,
+        "image": "https://source.unsplash.com/featured/?fastfood",
+        "category": "Snacks",
+        "restaurant": "Snack Attack"
+      },
+      {
+        "name": "Chair Snacks",
+        "price": 157,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Snacks",
+        "restaurant": "Snack Attack"
+      },
+      {
+        "name": "Forget Snacks",
+        "price": 281,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Snacks",
+        "restaurant": "Snack Attack"
+      },
+      {
+        "name": "Film Snacks",
+        "price": 122,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Snacks",
+        "restaurant": "Snack Attack"
+      }
+    ]
+  },
+  {
+    "name": "Crispy Bites",
+    "category": "Snacks",
+    "location": "East Arthur",
+    "image": "https://source.unsplash.com/featured/?pizza",
+    "menu": [
+      {
+        "name": "Any Snacks",
+        "price": 229,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Snacks",
+        "restaurant": "Crispy Bites"
+      },
+      {
+        "name": "Idea Snacks",
+        "price": 262,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Snacks",
+        "restaurant": "Crispy Bites"
+      },
+      {
+        "name": "Institution Snacks",
+        "price": 211,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Snacks",
+        "restaurant": "Crispy Bites"
+      },
+      {
+        "name": "Country Snacks",
+        "price": 142,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Snacks",
+        "restaurant": "Crispy Bites"
+      },
+      {
+        "name": "Scene Snacks",
+        "price": 247,
+        "image": "https://source.unsplash.com/featured/?milkshake",
+        "category": "Snacks",
+        "restaurant": "Crispy Bites"
+      },
+      {
+        "name": "Executive Snacks",
+        "price": 346,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Snacks",
+        "restaurant": "Crispy Bites"
+      },
+      {
+        "name": "Sit Snacks",
+        "price": 273,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Snacks",
+        "restaurant": "Crispy Bites"
+      },
+      {
+        "name": "Program Snacks",
+        "price": 244,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Snacks",
+        "restaurant": "Crispy Bites"
+      },
+      {
+        "name": "Happen Snacks",
+        "price": 211,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Snacks",
+        "restaurant": "Crispy Bites"
+      },
+      {
+        "name": "Civil Snacks",
+        "price": 320,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Snacks",
+        "restaurant": "Crispy Bites"
+      }
+    ]
+  },
+  {
+    "name": "Pizza Street",
+    "category": "Pizza/Burgers",
+    "location": "Millerton",
+    "image": "https://source.unsplash.com/featured/?snacks",
+    "menu": [
+      {
+        "name": "Relate Pizza/Burgers",
+        "price": 310,
+        "image": "https://source.unsplash.com/featured/?snacks",
+        "category": "Pizza/Burgers",
+        "restaurant": "Pizza Street"
+      },
+      {
+        "name": "Research Pizza/Burgers",
+        "price": 185,
+        "image": "https://source.unsplash.com/featured/?burger",
+        "category": "Pizza/Burgers",
+        "restaurant": "Pizza Street"
+      },
+      {
+        "name": "Real Pizza/Burgers",
+        "price": 246,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Pizza/Burgers",
+        "restaurant": "Pizza Street"
+      },
+      {
+        "name": "Mr Pizza/Burgers",
+        "price": 244,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Pizza/Burgers",
+        "restaurant": "Pizza Street"
+      },
+      {
+        "name": "Learn Pizza/Burgers",
+        "price": 293,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Pizza/Burgers",
+        "restaurant": "Pizza Street"
+      },
+      {
+        "name": "Because Pizza/Burgers",
+        "price": 278,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Pizza/Burgers",
+        "restaurant": "Pizza Street"
+      },
+      {
+        "name": "Camera Pizza/Burgers",
+        "price": 176,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Pizza/Burgers",
+        "restaurant": "Pizza Street"
+      },
+      {
+        "name": "Performance Pizza/Burgers",
+        "price": 331,
+        "image": "https://source.unsplash.com/featured/?dessert",
+        "category": "Pizza/Burgers",
+        "restaurant": "Pizza Street"
+      },
+      {
+        "name": "Republican Pizza/Burgers",
+        "price": 201,
+        "image": "https://source.unsplash.com/featured/?fastfood",
+        "category": "Pizza/Burgers",
+        "restaurant": "Pizza Street"
+      },
+      {
+        "name": "Play Pizza/Burgers",
+        "price": 182,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Pizza/Burgers",
+        "restaurant": "Pizza Street"
+      }
+    ]
+  },
+  {
+    "name": "Burger Hub",
+    "category": "Pizza/Burgers",
+    "location": "East Kevin",
+    "image": "https://source.unsplash.com/featured/?biryani",
+    "menu": [
+      {
+        "name": "Spring Pizza/Burgers",
+        "price": 234,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Pizza/Burgers",
+        "restaurant": "Burger Hub"
+      },
+      {
+        "name": "College Pizza/Burgers",
+        "price": 332,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Pizza/Burgers",
+        "restaurant": "Burger Hub"
+      },
+      {
+        "name": "Task Pizza/Burgers",
+        "price": 265,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Pizza/Burgers",
+        "restaurant": "Burger Hub"
+      },
+      {
+        "name": "Everyone Pizza/Burgers",
+        "price": 208,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Pizza/Burgers",
+        "restaurant": "Burger Hub"
+      },
+      {
+        "name": "Anyone Pizza/Burgers",
+        "price": 262,
+        "image": "https://source.unsplash.com/featured/?snacks",
+        "category": "Pizza/Burgers",
+        "restaurant": "Burger Hub"
+      },
+      {
+        "name": "Crime Pizza/Burgers",
+        "price": 316,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Pizza/Burgers",
+        "restaurant": "Burger Hub"
+      },
+      {
+        "name": "End Pizza/Burgers",
+        "price": 199,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Pizza/Burgers",
+        "restaurant": "Burger Hub"
+      },
+      {
+        "name": "Structure Pizza/Burgers",
+        "price": 273,
+        "image": "https://source.unsplash.com/featured/?fastfood",
+        "category": "Pizza/Burgers",
+        "restaurant": "Burger Hub"
+      },
+      {
+        "name": "Particular Pizza/Burgers",
+        "price": 208,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Pizza/Burgers",
+        "restaurant": "Burger Hub"
+      },
+      {
+        "name": "Actually Pizza/Burgers",
+        "price": 152,
+        "image": "https://source.unsplash.com/featured/?burger",
+        "category": "Pizza/Burgers",
+        "restaurant": "Burger Hub"
+      }
+    ]
+  },
+  {
+    "name": "ThickShakes Co.",
+    "category": "Juices/Milkshakes",
+    "location": "Russellhaven",
+    "image": "https://source.unsplash.com/featured/?pizza",
+    "menu": [
+      {
+        "name": "Office Juices/Milkshakes",
+        "price": 219,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Juices/Milkshakes",
+        "restaurant": "ThickShakes Co."
+      },
+      {
+        "name": "General Juices/Milkshakes",
+        "price": 297,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Juices/Milkshakes",
+        "restaurant": "ThickShakes Co."
+      },
+      {
+        "name": "Different Juices/Milkshakes",
+        "price": 163,
+        "image": "https://source.unsplash.com/featured/?milkshake",
+        "category": "Juices/Milkshakes",
+        "restaurant": "ThickShakes Co."
+      },
+      {
+        "name": "Rich Juices/Milkshakes",
+        "price": 244,
+        "image": "https://source.unsplash.com/featured/?fastfood",
+        "category": "Juices/Milkshakes",
+        "restaurant": "ThickShakes Co."
+      },
+      {
+        "name": "Detail Juices/Milkshakes",
+        "price": 191,
+        "image": "https://source.unsplash.com/featured/?burger",
+        "category": "Juices/Milkshakes",
+        "restaurant": "ThickShakes Co."
+      },
+      {
+        "name": "Knowledge Juices/Milkshakes",
+        "price": 205,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Juices/Milkshakes",
+        "restaurant": "ThickShakes Co."
+      },
+      {
+        "name": "Major Juices/Milkshakes",
+        "price": 251,
+        "image": "https://source.unsplash.com/featured/?dessert",
+        "category": "Juices/Milkshakes",
+        "restaurant": "ThickShakes Co."
+      },
+      {
+        "name": "Modern Juices/Milkshakes",
+        "price": 148,
+        "image": "https://source.unsplash.com/featured/?dessert",
+        "category": "Juices/Milkshakes",
+        "restaurant": "ThickShakes Co."
+      },
+      {
+        "name": "Great Juices/Milkshakes",
+        "price": 269,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Juices/Milkshakes",
+        "restaurant": "ThickShakes Co."
+      },
+      {
+        "name": "Much Juices/Milkshakes",
+        "price": 183,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Juices/Milkshakes",
+        "restaurant": "ThickShakes Co."
+      }
+    ]
+  },
+  {
+    "name": "Juice Buzz",
+    "category": "Juices/Milkshakes",
+    "location": "East Susanton",
+    "image": "https://source.unsplash.com/featured/?sweet",
+    "menu": [
+      {
+        "name": "Else Juices/Milkshakes",
+        "price": 208,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Juices/Milkshakes",
+        "restaurant": "Juice Buzz"
+      },
+      {
+        "name": "Ready Juices/Milkshakes",
+        "price": 299,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Juices/Milkshakes",
+        "restaurant": "Juice Buzz"
+      },
+      {
+        "name": "Number Juices/Milkshakes",
+        "price": 339,
+        "image": "https://source.unsplash.com/featured/?milkshake",
+        "category": "Juices/Milkshakes",
+        "restaurant": "Juice Buzz"
+      },
+      {
+        "name": "Race Juices/Milkshakes",
+        "price": 144,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Juices/Milkshakes",
+        "restaurant": "Juice Buzz"
+      },
+      {
+        "name": "Partner Juices/Milkshakes",
+        "price": 243,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Juices/Milkshakes",
+        "restaurant": "Juice Buzz"
+      },
+      {
+        "name": "Sound Juices/Milkshakes",
+        "price": 262,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Juices/Milkshakes",
+        "restaurant": "Juice Buzz"
+      },
+      {
+        "name": "Them Juices/Milkshakes",
+        "price": 132,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Juices/Milkshakes",
+        "restaurant": "Juice Buzz"
+      },
+      {
+        "name": "Any Juices/Milkshakes",
+        "price": 331,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Juices/Milkshakes",
+        "restaurant": "Juice Buzz"
+      },
+      {
+        "name": "Dog Juices/Milkshakes",
+        "price": 336,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Juices/Milkshakes",
+        "restaurant": "Juice Buzz"
+      },
+      {
+        "name": "My Juices/Milkshakes",
+        "price": 264,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Juices/Milkshakes",
+        "restaurant": "Juice Buzz"
+      }
+    ]
+  },
+  {
+    "name": "Sweet Moments",
+    "category": "Sweets",
+    "location": "Williamsberg",
+    "image": "https://source.unsplash.com/featured/?icecream",
+    "menu": [
+      {
+        "name": "Fine Sweets",
+        "price": 259,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Sweets",
+        "restaurant": "Sweet Moments"
+      },
+      {
+        "name": "Occur Sweets",
+        "price": 137,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Sweets",
+        "restaurant": "Sweet Moments"
+      },
+      {
+        "name": "Return Sweets",
+        "price": 180,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Sweets",
+        "restaurant": "Sweet Moments"
+      },
+      {
+        "name": "Magazine Sweets",
+        "price": 265,
+        "image": "https://source.unsplash.com/featured/?snacks",
+        "category": "Sweets",
+        "restaurant": "Sweet Moments"
+      },
+      {
+        "name": "Simple Sweets",
+        "price": 153,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Sweets",
+        "restaurant": "Sweet Moments"
+      },
+      {
+        "name": "Green Sweets",
+        "price": 260,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Sweets",
+        "restaurant": "Sweet Moments"
+      },
+      {
+        "name": "Price Sweets",
+        "price": 210,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Sweets",
+        "restaurant": "Sweet Moments"
+      },
+      {
+        "name": "Poor Sweets",
+        "price": 164,
+        "image": "https://source.unsplash.com/featured/?milkshake",
+        "category": "Sweets",
+        "restaurant": "Sweet Moments"
+      },
+      {
+        "name": "Important Sweets",
+        "price": 205,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Sweets",
+        "restaurant": "Sweet Moments"
+      },
+      {
+        "name": "Rise Sweets",
+        "price": 225,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Sweets",
+        "restaurant": "Sweet Moments"
+      }
+    ]
+  },
+  {
+    "name": "Mithai Magic",
+    "category": "Sweets",
+    "location": "Rodrigueztown",
+    "image": "https://source.unsplash.com/featured/?fastfood",
+    "menu": [
+      {
+        "name": "Choose Sweets",
+        "price": 149,
+        "image": "https://source.unsplash.com/featured/?snacks",
+        "category": "Sweets",
+        "restaurant": "Mithai Magic"
+      },
+      {
+        "name": "Travel Sweets",
+        "price": 150,
+        "image": "https://source.unsplash.com/featured/?dessert",
+        "category": "Sweets",
+        "restaurant": "Mithai Magic"
+      },
+      {
+        "name": "Fact Sweets",
+        "price": 267,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Sweets",
+        "restaurant": "Mithai Magic"
+      },
+      {
+        "name": "Growth Sweets",
+        "price": 206,
+        "image": "https://source.unsplash.com/featured/?fastfood",
+        "category": "Sweets",
+        "restaurant": "Mithai Magic"
+      },
+      {
+        "name": "Your Sweets",
+        "price": 120,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Sweets",
+        "restaurant": "Mithai Magic"
+      },
+      {
+        "name": "Well Sweets",
+        "price": 344,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Sweets",
+        "restaurant": "Mithai Magic"
+      },
+      {
+        "name": "Laugh Sweets",
+        "price": 262,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Sweets",
+        "restaurant": "Mithai Magic"
+      },
+      {
+        "name": "Various Sweets",
+        "price": 303,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Sweets",
+        "restaurant": "Mithai Magic"
+      },
+      {
+        "name": "Public Sweets",
+        "price": 300,
+        "image": "https://source.unsplash.com/featured/?milkshake",
+        "category": "Sweets",
+        "restaurant": "Mithai Magic"
+      },
+      {
+        "name": "Approach Sweets",
+        "price": 293,
+        "image": "https://source.unsplash.com/featured/?tiffin",
+        "category": "Sweets",
+        "restaurant": "Mithai Magic"
+      }
+    ]
+  },
+  {
+    "name": "SpiceHub",
+    "category": "Fast Foods",
+    "location": "Johnstad",
+    "image": "https://source.unsplash.com/featured/?tiffin",
+    "menu": [
+      {
+        "name": "Keep Fast Foods",
+        "price": 276,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Fast Foods",
+        "restaurant": "SpiceHub"
+      },
+      {
+        "name": "Truth Fast Foods",
+        "price": 156,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Fast Foods",
+        "restaurant": "SpiceHub"
+      },
+      {
+        "name": "If Fast Foods",
+        "price": 270,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Fast Foods",
+        "restaurant": "SpiceHub"
+      },
+      {
+        "name": "Leave Fast Foods",
+        "price": 170,
+        "image": "https://source.unsplash.com/featured/?snacks",
+        "category": "Fast Foods",
+        "restaurant": "SpiceHub"
+      },
+      {
+        "name": "Finish Fast Foods",
+        "price": 163,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Fast Foods",
+        "restaurant": "SpiceHub"
+      },
+      {
+        "name": "Society Fast Foods",
+        "price": 316,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Fast Foods",
+        "restaurant": "SpiceHub"
+      },
+      {
+        "name": "Goal Fast Foods",
+        "price": 296,
+        "image": "https://source.unsplash.com/featured/?burger",
+        "category": "Fast Foods",
+        "restaurant": "SpiceHub"
+      },
+      {
+        "name": "Open Fast Foods",
+        "price": 251,
+        "image": "https://source.unsplash.com/featured/?dessert",
+        "category": "Fast Foods",
+        "restaurant": "SpiceHub"
+      },
+      {
+        "name": "Already Fast Foods",
+        "price": 186,
+        "image": "https://source.unsplash.com/featured/?burger",
+        "category": "Fast Foods",
+        "restaurant": "SpiceHub"
+      },
+      {
+        "name": "Thus Fast Foods",
+        "price": 330,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Fast Foods",
+        "restaurant": "SpiceHub"
+      }
+    ]
+  },
+  {
+    "name": "Quick Bites",
+    "category": "Fast Foods",
+    "location": "West Adamberg",
+    "image": "https://source.unsplash.com/featured/?juice",
+    "menu": [
+      {
+        "name": "Environmental Fast Foods",
+        "price": 198,
+        "image": "https://source.unsplash.com/featured/?snacks",
+        "category": "Fast Foods",
+        "restaurant": "Quick Bites"
+      },
+      {
+        "name": "Still Fast Foods",
+        "price": 336,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Fast Foods",
+        "restaurant": "Quick Bites"
+      },
+      {
+        "name": "Point Fast Foods",
+        "price": 349,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Fast Foods",
+        "restaurant": "Quick Bites"
+      },
+      {
+        "name": "Consumer Fast Foods",
+        "price": 137,
+        "image": "https://source.unsplash.com/featured/?juice",
+        "category": "Fast Foods",
+        "restaurant": "Quick Bites"
+      },
+      {
+        "name": "Front Fast Foods",
+        "price": 278,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Fast Foods",
+        "restaurant": "Quick Bites"
+      },
+      {
+        "name": "Recently Fast Foods",
+        "price": 223,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Fast Foods",
+        "restaurant": "Quick Bites"
+      },
+      {
+        "name": "Beautiful Fast Foods",
+        "price": 244,
+        "image": "https://source.unsplash.com/featured/?milkshake",
+        "category": "Fast Foods",
+        "restaurant": "Quick Bites"
+      },
+      {
+        "name": "Organization Fast Foods",
+        "price": 154,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Fast Foods",
+        "restaurant": "Quick Bites"
+      },
+      {
+        "name": "Unit Fast Foods",
+        "price": 294,
+        "image": "https://source.unsplash.com/featured/?fastfood",
+        "category": "Fast Foods",
+        "restaurant": "Quick Bites"
+      },
+      {
+        "name": "Over Fast Foods",
+        "price": 237,
+        "image": "https://source.unsplash.com/featured/?milkshake",
+        "category": "Fast Foods",
+        "restaurant": "Quick Bites"
+      }
+    ]
+  },
+  {
+    "name": "Frozen Treats",
+    "category": "Ice Creams",
+    "location": "Port Kristinmouth",
+    "image": "https://source.unsplash.com/featured/?dessert",
+    "menu": [
+      {
+        "name": "Million Ice Creams",
+        "price": 238,
+        "image": "https://source.unsplash.com/featured/?fastfood",
+        "category": "Ice Creams",
+        "restaurant": "Frozen Treats"
+      },
+      {
+        "name": "Feel Ice Creams",
+        "price": 323,
+        "image": "https://source.unsplash.com/featured/?sweet",
+        "category": "Ice Creams",
+        "restaurant": "Frozen Treats"
+      },
+      {
+        "name": "Age Ice Creams",
+        "price": 300,
+        "image": "https://source.unsplash.com/featured/?snacks",
+        "category": "Ice Creams",
+        "restaurant": "Frozen Treats"
+      },
+      {
+        "name": "Best Ice Creams",
+        "price": 309,
+        "image": "https://source.unsplash.com/featured/?fastfood",
+        "category": "Ice Creams",
+        "restaurant": "Frozen Treats"
+      },
+      {
+        "name": "Town Ice Creams",
+        "price": 314,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Ice Creams",
+        "restaurant": "Frozen Treats"
+      },
+      {
+        "name": "Language Ice Creams",
+        "price": 295,
+        "image": "https://source.unsplash.com/featured/?icecream",
+        "category": "Ice Creams",
+        "restaurant": "Frozen Treats"
+      },
+      {
+        "name": "Seat Ice Creams",
+        "price": 307,
+        "image": "https://source.unsplash.com/featured/?snacks",
+        "category": "Ice Creams",
+        "restaurant": "Frozen Treats"
+      },
+      {
+        "name": "Organization Ice Creams",
+        "price": 327,
+        "image": "https://source.unsplash.com/featured/?biryani",
+        "category": "Ice Creams",
+        "restaurant": "Frozen Treats"
+      },
+      {
+        "name": "Different Ice Creams",
+        "price": 227,
+        "image": "https://source.unsplash.com/featured/?pizza",
+        "category": "Ice Creams",
+        "restaurant": "Frozen Treats"
+      },
+      {
+        "name": "Executive Ice Creams",
+        "price": 212,
+        "image": "https://source.unsplash.com/featured/?dessert",
+        "category": "Ice Creams",
+        "restaurant": "Frozen Treats"
+      }
+    ]
+  }
+]
