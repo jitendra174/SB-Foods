@@ -11,6 +11,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log("🌐 ENV:", import.meta.env.VITE_API_BASE_URL);
     fetch(`${import.meta.env.VITE_API_BASE_URL}/api/restaurants?limit=4`)
       .then((res) => res.json())
       .then((data) => setFeaturedRestaurants(data))
