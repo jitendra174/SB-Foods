@@ -38,7 +38,7 @@ const Login = () => {
         return;
       }
 
-      login(data.token); // stores token using context
+      login(data.token); 
       setMsg("Login successful!");
 
       setTimeout(() => {

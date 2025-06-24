@@ -46,7 +46,7 @@ const AdminOrders = () => {
 
       if (res.ok) {
         toast.success("Order status updated");
-        fetchOrders(); // Refresh list after status update
+        await fetchOrders(); // Refresh orders list
       } else {
         toast.error(data.message || "Failed to update status");
       }
@@ -63,7 +63,9 @@ const AdminOrders = () => {
 
   return (
     <div className="min-h-screen bg-white px-4 py-10 max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold mb-6 text-primary text-center">📦 All User Orders</h2>
+      <h2 className="text-3xl font-bold mb-6 text-red-600 text-center">
+        📦 All User Orders
+      </h2>
 
       {loading ? (
         <p className="text-gray-500 text-center">Loading orders...</p>
@@ -74,16 +76,16 @@ const AdminOrders = () => {
           {orders.map((order) => (
             <div key={order._id} className="border p-5 rounded-lg shadow-sm bg-white">
               <div className="flex justify-between items-center">
-                <h4 className="font-bold text-gray-800">
-                  Order #{order._id.slice(-6).toUpperCase()}
+                <h4 className="font-bold text-gray-800 text-sm md:text-base">
+                  Order ID: <span className="font-mono">{order._id.slice(-6).toUpperCase()}</span>
                 </h4>
                 <span
-                  className={`px-2 py-1 text-sm rounded-full font-medium ${
+                  className={`px-3 py-1 text-xs rounded-full font-semibold ${
                     order.status === "Pending"
                       ? "bg-yellow-100 text-yellow-700"
-                      : order.status === "Delivered"
-                      ? "bg-green-100 text-green-700"
-                      : "bg-blue-100 text-blue-700"
+                      : order.status === "Preparing"
+                      ? "bg-blue-100 text-blue-700"
+                      : "bg-green-100 text-green-700"
                   }`}
                 >
                   {order.status}
@@ -91,10 +93,13 @@ const AdminOrders = () => {
               </div>
 
               <p className="text-sm text-gray-600 mt-1">
-                🧍 {order.userId?.name || "User"} ({order.userId?.email || "N/A"})
+                🧍 {order.userId?.name || "Unknown User"} ({order.userId?.email || "N/A"})
               </p>
               <p className="text-sm text-gray-500">
-                📅 {new Date(order.createdAt).toLocaleString()}
+                📅{" "}
+                {order.createdAt
+                  ? new Date(order.createdAt).toLocaleString()
+                  : "Date Unavailable"}
               </p>
 
               <ul className="mt-3 text-sm list-disc list-inside text-gray-700">
@@ -106,8 +111,8 @@ const AdminOrders = () => {
               </ul>
 
               <div className="mt-4 flex justify-between items-center">
-                <p className="text-lg font-semibold text-primary">
-                  ₹{order.totalAmount.toFixed(2)}
+                <p className="text-lg font-semibold text-red-600">
+                  ₹{order.totalAmount?.toFixed(2) || "0.00"}
                 </p>
 
                 {order.status !== "Delivered" && (
@@ -116,7 +121,11 @@ const AdminOrders = () => {
                       <button
                         onClick={() => handleStatusUpdate(order._id, "Preparing")}
                         disabled={updatingOrderId === order._id}
-                        className="px-4 py-1 text-sm bg-blue-100 text-blue-700 rounded"
+                        className={`px-4 py-1 text-sm rounded transition ${
+                          updatingOrderId === order._id
+                            ? "bg-blue-200 text-blue-500"
+                            : "bg-blue-100 text-blue-700 hover:bg-blue-200"
+                        }`}
                       >
                         Preparing
                       </button>
@@ -124,7 +133,11 @@ const AdminOrders = () => {
                     <button
                       onClick={() => handleStatusUpdate(order._id, "Delivered")}
                       disabled={updatingOrderId === order._id}
-                      className="px-4 py-1 text-sm bg-green-100 text-green-700 rounded"
+                      className={`px-4 py-1 text-sm rounded transition ${
+                        updatingOrderId === order._id
+                          ? "bg-green-200 text-green-500"
+                          : "bg-green-100 text-green-700 hover:bg-green-200"
+                      }`}
                     >
                       Mark Delivered
                     </button>

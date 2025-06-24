@@ -15,7 +15,7 @@ const AdminAllOrders = () => {
     }
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders/admin/${id}/status`, {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders/admin`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
