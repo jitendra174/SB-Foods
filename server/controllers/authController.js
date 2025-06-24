@@ -4,9 +4,9 @@ import User from '../models/User.js';
 
 const ADMIN_EMAIL = 'admin@sbfoods.com';
 const ADMIN_PASSWORD = 'admin123';
-const SECRET = 'secretkey123'; // 🛡️ Use .env in production
+const SECRET = 'secretkey123'; 
 
-// 🔐 Admin Login
+
 export const adminLogin = async (req, res) => {
   const { email, password } = req.body;
 
@@ -24,7 +24,7 @@ export const adminLogin = async (req, res) => {
   return res.status(401).json({ success: false, message: 'Invalid admin credentials' });
 };
 
-// 👤 User Signup
+
 export const signupUser = async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -49,11 +49,11 @@ export const signupUser = async (req, res) => {
   }
 };
 
-// ✅ User Login
+
 export const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
-  // ⚠️ Fallback to admin shortcut
+
   if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
     const token = jwt.sign({ role: 'admin' }, SECRET, { expiresIn: '3h' });
 
@@ -91,7 +91,7 @@ export const loginUser = async (req, res) => {
   }
 };
 
-// 📌 Get Authenticated User Info
+
 export const getMe = async (req, res) => {
   const authHeader = req.headers.authorization;
   const token = authHeader && authHeader.split(" ")[1];
@@ -101,7 +101,7 @@ export const getMe = async (req, res) => {
   try {
     const decoded = jwt.verify(token, SECRET);
 
-    // 🧑 Admin shortcut
+  
     if (decoded.role === 'admin') {
       return res.json({
         isAdmin: true,
@@ -112,7 +112,7 @@ export const getMe = async (req, res) => {
       });
     }
 
-    // 👤 Normal user
+  
     const user = await User.findById(decoded.userId);
     if (!user) return res.status(404).json({ message: 'User not found' });
 

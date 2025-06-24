@@ -19,7 +19,7 @@ const AllRestaurants = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Read category from query string
+
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const initialCategory = params.get('category');
@@ -28,7 +28,7 @@ const AllRestaurants = () => {
     }
   }, [location.search]);
 
-  // Fetch all restaurants
+
   useEffect(() => {
     fetch('http://localhost:5000/api/restaurants')
       .then((res) => res.json())
@@ -44,7 +44,6 @@ const AllRestaurants = () => {
       .catch((err) => console.error('Failed to fetch restaurants:', err));
   }, []);
 
-  // Apply filters
   useEffect(() => {
     let results = [...restaurants];
 
@@ -88,7 +87,7 @@ const AllRestaurants = () => {
     setSearchTerm('');
     setSortOption('');
     setCurrentPage(1);
-    navigate('/restaurants'); // reset query param
+    navigate('/restaurants'); 
   };
 
   const paginated = filtered.slice(

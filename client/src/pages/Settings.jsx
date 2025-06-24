@@ -41,13 +41,11 @@ const Settings = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setMessage("✅ (Demo) Settings updated successfully!");
-    // 🔧 Add your update API call here
   };
 
   const handleDeactivate = () => {
     if (window.confirm("Are you sure you want to deactivate your account?")) {
       alert("Account deactivated (demo only)");
-      // 🔧 Add DELETE call here in real app
     }
   };
 

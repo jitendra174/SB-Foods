@@ -1,4 +1,3 @@
-// server/routes/authRoutes.js
 import express from 'express';
 import {
   adminLogin,
@@ -14,7 +13,7 @@ router.post('/admin/login', adminLogin);
 router.post('/signup', signupUser);
 router.post('/login', loginUser);
 
-// 🔐 Add this route to get user info from token
+
 router.get('/me', getMe);
 
 export default router;

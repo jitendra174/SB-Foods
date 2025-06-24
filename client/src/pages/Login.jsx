@@ -11,7 +11,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-  const { login } = useAuth(); // ✅ use login method from AuthContext
+  const { login } = useAuth(); 
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -38,7 +38,7 @@ const Login = () => {
         return;
       }
 
-      login(data.token); // ✅ sets token + auto fetches user/admin info
+      login(data.token);
       setMsg("Login successful!");
 
       setTimeout(() => {

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext"; // ✅ Import context
+import { useAuth } from "../context/AuthContext"; 
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const navigate = useNavigate();
-  const { isAdmin } = useAuth(); // ✅ Check admin status
+  const { isAdmin } = useAuth();
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -18,7 +18,6 @@ const Orders = () => {
         return navigate("/login");
       }
 
-      // 🚫 Block admins from this page
       if (isAdmin) {
         toast.error("Admins cannot access user orders");
         return navigate("/admin/orders");

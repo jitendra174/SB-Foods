@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Lottie from 'lottie-react';
-import splashAnimation from '../assets/splash.json'; // 👈 Replace with your Lottie file path
+import splashAnimation from '../assets/splash.json'; 
 
 const SplashScreen = () => {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ const SplashScreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/');
-    }, 3000); // 3s duration
+    }, 4000); 
     return () => clearTimeout(timer);
   }, [navigate]);
 

@@ -1,17 +1,17 @@
 import React, { createContext, useContext, useReducer, useEffect } from "react";
 
-// 🔄 Load cart from sessionStorage
+
 const getInitialCart = () => {
   const storedCart = sessionStorage.getItem("cart");
   return storedCart ? JSON.parse(storedCart) : [];
 };
 
-// 🔧 Initial State
+
 const initialState = {
   cart: getInitialCart(),
 };
 
-// 🧠 Reducer Logic (🔥 Pure logic only - no toasts!)
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD": {
@@ -63,19 +63,19 @@ const reducer = (state, action) => {
   }
 };
 
-// 📦 Create Context
+
 const CartContext = createContext();
 
-// 📤 Provider
+
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  // 💾 Save to sessionStorage on cart change
+
   useEffect(() => {
     sessionStorage.setItem("cart", JSON.stringify(state.cart));
   }, [state.cart]);
 
-  // ✅ Cart Actions (with toast logic here only)
+
   const addToCart = (item) => {
     dispatch({ type: "ADD", payload: item });
   };
@@ -112,5 +112,5 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// ✅ Hook for easy access
+
 export const useCart = () => useContext(CartContext);

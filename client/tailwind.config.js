@@ -9,15 +9,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#FF5722',     // Bold orange-red
-        secondary: '#FFC107',   // Golden yellow
-        accent: '#FF7043',      // Soft reddish orange
-        darkText: '#212121',    // Deep gray for text
-        lightBg: '#FFFFFF',     // White background
-        muted: '#f5f5f5',       // Light muted backgrounds
+        primary: '#FF5722',     
+        secondary: '#FFC107',   
+        accent: '#FF7043',      
+        darkText: '#212121',    
+        lightBg: '#FFFFFF',     
+        muted: '#f5f5f5',       
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'], // Use a clean modern font
+        sans: ['Poppins', 'sans-serif'], 
       },
       boxShadow: {
         card: '0 4px 14px rgba(0,0,0,0.1)',

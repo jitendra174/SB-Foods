@@ -14,11 +14,11 @@ import {
 const router = express.Router();
 
 // 🛒 User routes
-router.post('/', protectUser, placeOrder);              // POST /api/orders
-router.get('/me', protectUser, getUserOrders);          // GET /api/orders/me
+router.post('/', protectUser, placeOrder);              
+router.get('/me', protectUser, getUserOrders);          
 
 // 🧑‍💼 Admin routes
-router.get('/', protectAdmin, getAllOrders);            // GET /api/orders
-router.patch('/:id', protectAdmin, updateOrderStatus);  // PATCH /api/orders/:id
+router.get('/', protectAdmin, getAllOrders);            
+router.patch('/:id', protectAdmin, updateOrderStatus); 
 
 export default router;

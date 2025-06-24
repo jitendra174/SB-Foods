@@ -1,4 +1,3 @@
-// src/pages/admin/AdminDashboard.jsx
 import React from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, Utensils, LogOut, ClipboardList } from 'lucide-react';

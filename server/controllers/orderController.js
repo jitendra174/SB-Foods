@@ -1,6 +1,6 @@
 import Order from "../models/Order.js";
 
-// User places order
+
 export const placeOrder = async (req, res) => {
   try {
     const { items, totalAmount } = req.body;
@@ -16,7 +16,7 @@ export const placeOrder = async (req, res) => {
   }
 };
 
-// User views their orders
+
 export const getUserOrders = async (req, res) => {
   try {
     const orders = await Order.find({ userId: req.user.id }).sort({ createdAt: -1 });
@@ -26,7 +26,7 @@ export const getUserOrders = async (req, res) => {
   }
 };
 
-// Admin views all orders
+
 export const getAllOrders = async (req, res) => {
   try {
     const orders = await Order.find().populate("userId", "name email").sort({ createdAt: -1 });
@@ -36,7 +36,7 @@ export const getAllOrders = async (req, res) => {
   }
 };
 
-// Admin updates order status
+
 export const updateOrderStatus = async (req, res) => {
   try {
     const { status } = req.body;

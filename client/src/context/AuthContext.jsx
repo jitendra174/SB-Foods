@@ -1,15 +1,15 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-// 🔐 Create context
+
 const AuthContext = createContext();
 
-// 🔧 Provider component
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
   const [token, setToken] = useState(sessionStorage.getItem("token") || null);
 
-  // 🌐 Fetch user/admin info based on token
+ 
   const fetchUser = async () => {
     if (!token) return;
 
@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // 🧹 Logout
+ 
   const handleLogout = () => {
     sessionStorage.removeItem("token");
     setUser(null);
@@ -43,13 +43,13 @@ export const AuthProvider = ({ children }) => {
     setToken(null);
   };
 
-  // 🧠 Set token on login/signup
+
   const login = (newToken) => {
     sessionStorage.setItem("token", newToken);
     setToken(newToken);
   };
 
-  // 📦 Fetch user/admin on token change
+ 
   useEffect(() => {
     fetchUser();
   }, [token]);
@@ -70,5 +70,5 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-// ✅ Easy hook
+
 export const useAuth = () => useContext(AuthContext);

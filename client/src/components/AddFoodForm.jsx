@@ -11,7 +11,7 @@ export default function AddFoodForm({ onAdd }) {
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-    if (error) setError(""); // Clear error on change
+    if (error) setError(""); 
   };
 
   const handleSubmit = (e) => {

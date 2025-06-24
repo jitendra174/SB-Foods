@@ -13,19 +13,18 @@ import {
 
 const router = express.Router();
 
-// Public
 router.get('/', getAllRestaurants);
 router.get('/featured', getFeaturedRestaurants);
 router.get('/:id', getRestaurantById);
 
-// Admin Routes
-router.post('/', createRestaurant);                       // ➕ Add new restaurant
-router.put('/:id', updateRestaurant);                     // ✏️ Update restaurant info
-router.delete('/:id', deleteRestaurant);                  // ❌ Delete restaurant
 
-// Menu CRUD inside a restaurant
-router.post('/:id/menu', addMenuItem);                    // ➕ Add menu item
-router.put('/:id/menu/:itemId', updateMenuItem);          // ✏️ Update menu item
-router.delete('/:id/menu/:itemId', deleteMenuItem);       // ❌ Delete menu item
+router.post('/', createRestaurant);                       
+router.put('/:id', updateRestaurant);                     
+router.delete('/:id', deleteRestaurant);                  
+
+
+router.post('/:id/menu', addMenuItem);                   
+router.put('/:id/menu/:itemId', updateMenuItem);          
+router.delete('/:id/menu/:itemId', deleteMenuItem);       
 
 export default router;

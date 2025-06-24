@@ -1,9 +1,9 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
-const SECRET = 'secretkey123'; // ⚠️ Use the same secret as in authController
+const SECRET = 'secretkey123'; 
 
-// 🔐 Protect User Routes
+
 export const protectUser = async (req, res, next) => {
   const token = req.headers.authorization?.split(" ")[1];
 
@@ -14,18 +14,18 @@ export const protectUser = async (req, res, next) => {
   try {
     const decoded = jwt.verify(token, SECRET);
 
-    // If the token belongs to admin (e.g. trying to view user orders with admin token)
+
     if (decoded.role === 'admin') {
       return res.status(403).json({ message: "Admins are not allowed to access user routes" });
     }
 
-    const user = await User.findById(decoded.userId); // ✅ match with loginUser token payload
+    const user = await User.findById(decoded.userId);
 
     if (!user) {
       return res.status(401).json({ message: "User not found" });
     }
 
-    req.user = { id: user._id }; // ✅ set usable user data
+    req.user = { id: user._id }; 
     next();
   } catch (err) {
     console.error('❌ User token error:', err.message);
@@ -33,7 +33,6 @@ export const protectUser = async (req, res, next) => {
   }
 };
 
-// 🔐 Protect Admin Routes
 export const protectAdmin = async (req, res, next) => {
   const token = req.headers.authorization?.split(" ")[1];
 
@@ -42,13 +41,13 @@ export const protectAdmin = async (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, SECRET); // same secret
+    const decoded = jwt.verify(token, SECRET); 
 
     if (decoded.role !== 'admin') {
       return res.status(403).json({ message: "Access denied. Admins only." });
     }
 
-    req.admin = { role: 'admin' }; // ✅ mark admin session
+    req.admin = { role: 'admin' }; 
     next();
   } catch (err) {
     console.error('❌ Admin token error:', err.message);

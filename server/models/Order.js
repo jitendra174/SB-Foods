@@ -21,7 +21,7 @@ const orderSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    default: "Pending", // Pending | Preparing | Delivered | Cancelled
+    default: "Pending",
   },
   createdAt: {
     type: Date,

@@ -1,12 +1,10 @@
-// App.jsx
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './index.css';
 
-// Contexts
+
 import { useAuth } from './context/AuthContext';
 
-// Pages
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -18,9 +16,8 @@ import Profile from './pages/Profile';
 import Orders from './pages/Orders';
 import Settings from './pages/Settings';
 import Cart from './pages/Cart';
-import SplashScreen from './pages/SplashScreen'; // ✅ New
+import SplashScreen from './pages/SplashScreen'; 
 
-// Admin Pages
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminPanel from './pages/admin/AdminPanel';
 import AdminManageRestaurant from './pages/admin/AdminManageRestaurant';
@@ -28,10 +25,8 @@ import AdminLogin from './pages/admin/AdminLogin';
 import AdminAllOrders from './pages/admin/AdminAllOrders';
 import AdminOrders from './pages/admin/AdminOrders';
 
-// Layout
 import Layout from './pages/Layout';
 
-// Toast
 import { Toaster } from 'react-hot-toast';
 
 function App() {

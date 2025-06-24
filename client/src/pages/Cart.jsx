@@ -38,7 +38,6 @@ const Cart = () => {
       const data = await res.json();
 
       if (res.ok) {
-        // ✅ Avoid double toast by delaying inside setTimeout
         setTimeout(() => {
           toast.success("Order placed successfully!");
         }, 200);

@@ -11,10 +11,10 @@ const RestaurantMenu = () => {
   const [filteredItems, setFilteredItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
-  const [clickedItemId, setClickedItemId] = useState(null); // ✅ debounce state
+  const [clickedItemId, setClickedItemId] = useState(null); 
   const { addToCart } = useCart();
 
-  // Fetch restaurant & menu
+
   useEffect(() => {
     const fetchRestaurant = async () => {
       try {
@@ -31,7 +31,7 @@ const RestaurantMenu = () => {
     fetchRestaurant();
   }, [id]);
 
-  // Filter logic
+
   useEffect(() => {
     let filtered = [...menuItems];
 
@@ -48,15 +48,15 @@ const RestaurantMenu = () => {
     setFilteredItems(filtered);
   }, [selectedCategory, searchTerm, menuItems]);
 
-  // Add to cart + toast once
+
   const handleOrderNow = (item) => {
-    if (clickedItemId === item._id) return; // ✅ prevent rapid double click
+    if (clickedItemId === item._id) return; 
 
     setClickedItemId(item._id);
-    addToCart(item); // ✅ will not trigger toast from CartContext
+    addToCart(item); 
     toast.success(`${item.name} added to cart`);
 
-    setTimeout(() => setClickedItemId(null), 800); // allow next click
+    setTimeout(() => setClickedItemId(null), 800); 
   };
 
   return (

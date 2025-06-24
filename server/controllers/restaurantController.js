@@ -1,6 +1,6 @@
 import Restaurant from '../models/restaurantModel.js';
 
-// Get all restaurants
+
 export const getAllRestaurants = async (req, res) => {
   try {
     const limit = parseInt(req.query.limit) || 0;
@@ -11,7 +11,7 @@ export const getAllRestaurants = async (req, res) => {
   }
 };
 
-// Get featured restaurants (limit 4)
+
 export const getFeaturedRestaurants = async (req, res) => {
   try {
     const restaurants = await Restaurant.find().limit(4);
@@ -21,7 +21,7 @@ export const getFeaturedRestaurants = async (req, res) => {
   }
 };
 
-// Get a single restaurant by ID
+
 export const getRestaurantById = async (req, res) => {
   try {
     const restaurant = await Restaurant.findById(req.params.id);
@@ -34,7 +34,7 @@ export const getRestaurantById = async (req, res) => {
   }
 };
 
-// Create a new restaurant
+
 export const createRestaurant = async (req, res) => {
   try {
     const { name, image, location } = req.body;
@@ -46,7 +46,7 @@ export const createRestaurant = async (req, res) => {
   }
 };
 
-// Update restaurant details
+
 export const updateRestaurant = async (req, res) => {
   try {
     const { name, image, location } = req.body;
@@ -64,7 +64,7 @@ export const updateRestaurant = async (req, res) => {
   }
 };
 
-// Delete a restaurant
+
 export const deleteRestaurant = async (req, res) => {
   try {
     const deleted = await Restaurant.findByIdAndDelete(req.params.id);
@@ -77,7 +77,7 @@ export const deleteRestaurant = async (req, res) => {
   }
 };
 
-// Add a menu item to a restaurant
+
 export const addMenuItem = async (req, res) => {
   try {
     const { name, image, price } = req.body;
@@ -96,7 +96,6 @@ export const addMenuItem = async (req, res) => {
   }
 };
 
-// Update a specific menu item
 export const updateMenuItem = async (req, res) => {
   try {
     const { name, image, price } = req.body;
@@ -121,7 +120,6 @@ export const updateMenuItem = async (req, res) => {
   }
 };
 
-// ✅ Delete a menu item (fixed version)
 export const deleteMenuItem = async (req, res) => {
   try {
     const restaurant = await Restaurant.findById(req.params.id);

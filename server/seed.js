@@ -1,4 +1,3 @@
-// server/seed.js
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import fs from 'fs';
@@ -23,8 +22,8 @@ const seedRestaurants = async () => {
     const jsonData = fs.readFileSync(filePath, 'utf-8');
     const restaurants = JSON.parse(jsonData);
 
-    await Restaurant.deleteMany(); // Clear existing data
-    await Restaurant.insertMany(restaurants); // Insert new data
+    await Restaurant.deleteMany(); 
+    await Restaurant.insertMany(restaurants); 
 
     console.log('✅ Database seeded successfully!');
     process.exit();

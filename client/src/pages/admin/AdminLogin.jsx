@@ -9,7 +9,7 @@ const AdminLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const { login } = useAuth(); // ✅ shared login method
+  const { login } = useAuth(); 
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -34,7 +34,7 @@ const AdminLogin = () => {
         return;
       }
 
-      login(data.token); // ✅ handles session + user/admin check
+      login(data.token); 
       navigate("/admin");
     } catch (err) {
       console.error("Admin login error:", err);
