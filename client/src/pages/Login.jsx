@@ -11,7 +11,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-  const { login } = useAuth(); 
+  const { login } = useAuth();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -25,7 +25,7 @@ const Login = () => {
     setMsg("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -38,7 +38,7 @@ const Login = () => {
         return;
       }
 
-      login(data.token);
+      login(data.token); // stores token using context
       setMsg("Login successful!");
 
       setTimeout(() => {
@@ -49,6 +49,7 @@ const Login = () => {
       setError("Server error. Please try again.");
     }
   };
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-white px-4 py-12">

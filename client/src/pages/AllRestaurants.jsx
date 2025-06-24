@@ -30,7 +30,7 @@ const AllRestaurants = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/restaurants')
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/restaurants`)
       .then((res) => res.json())
       .then((data) => {
         const withRatings = data.map((r) => ({

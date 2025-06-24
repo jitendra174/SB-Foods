@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const AdminPanel = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -10,38 +11,53 @@ const AdminPanel = () => {
   });
   const navigate = useNavigate();
 
+  const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
   useEffect(() => {
-    fetch('http://localhost:5000/api/restaurants')
+    fetch(`${API_BASE}/api/restaurants`)
       .then(res => res.json())
       .then(data => setRestaurants(data))
-      .catch(err => console.error('Error fetching restaurants', err));
+      .catch(err => {
+        console.error('Error fetching restaurants', err);
+        toast.error("Failed to load restaurants");
+      });
   }, []);
 
   const handleAddRestaurant = async () => {
-    const res = await fetch('http://localhost:5000/api/restaurants', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(newRestaurant)
-    });
+    try {
+      const res = await fetch(`${API_BASE}/api/restaurants`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newRestaurant)
+      });
 
-    const data = await res.json();
-    if (res.ok) {
-      setRestaurants([...restaurants, data]);
-      setNewRestaurant({ name: '', image: '', location: '' });
-    } else {
-      alert(data.message || 'Failed to add restaurant');
+      const data = await res.json();
+      if (res.ok) {
+        setRestaurants([...restaurants, data]);
+        setNewRestaurant({ name: '', image: '', location: '' });
+        toast.success("Restaurant added");
+      } else {
+        toast.error(data.message || 'Failed to add restaurant');
+      }
+    } catch (err) {
+      toast.error("Error adding restaurant");
     }
   };
 
   const handleDelete = async (id) => {
-    const res = await fetch(`http://localhost:5000/api/restaurants/${id}`, {
-      method: 'DELETE'
-    });
+    try {
+      const res = await fetch(`${API_BASE}/api/restaurants/${id}`, {
+        method: 'DELETE'
+      });
 
-    if (res.ok) {
-      setRestaurants(restaurants.filter(r => r._id !== id));
-    } else {
-      alert('Error deleting restaurant');
+      if (res.ok) {
+        setRestaurants(restaurants.filter(r => r._id !== id));
+        toast.success("Deleted successfully");
+      } else {
+        toast.error('Error deleting restaurant');
+      }
+    } catch (err) {
+      toast.error("Delete failed");
     }
   };
 

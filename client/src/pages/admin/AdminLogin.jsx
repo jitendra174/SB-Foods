@@ -9,7 +9,7 @@ const AdminLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const { login } = useAuth(); 
+  const { login } = useAuth();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -21,7 +21,8 @@ const AdminLogin = () => {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/admin/login", {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/auth/admin`, {
+
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -34,7 +35,7 @@ const AdminLogin = () => {
         return;
       }
 
-      login(data.token); 
+      login(data.token);
       navigate("/admin");
     } catch (err) {
       console.error("Admin login error:", err);

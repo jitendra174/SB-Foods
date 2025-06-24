@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext"; 
+import { useAuth } from "../context/AuthContext";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -24,19 +24,21 @@ const Orders = () => {
       }
 
       try {
-        const res = await fetch("http://localhost:5000/api/orders/me", {
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
+
         const data = await res.json();
+
         if (res.ok) {
           setOrders(data);
         } else {
           toast.error(data.message || "Failed to load orders");
         }
       } catch (err) {
-        toast.error("Server error");
+        toast.error("Server error while loading orders");
       }
     };
 
@@ -91,7 +93,7 @@ const Orders = () => {
               </ul>
 
               <p className="text-right text-lg font-bold text-primary">
-                ₹{order.totalAmount}
+                ₹{order.totalAmount.toFixed(2)}
               </p>
             </motion.div>
           ))}

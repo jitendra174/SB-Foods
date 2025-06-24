@@ -15,7 +15,7 @@ const AdminAllOrders = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/orders/admin", {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders/admin/${id}/status`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -36,7 +36,8 @@ const AdminAllOrders = () => {
   const updateStatus = async (id, newStatus) => {
     const token = sessionStorage.getItem("token");
     try {
-      const res = await fetch(`http://localhost:5000/api/orders/admin/${id}/status`, {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders/admin/${id}/status`, {
+
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -83,13 +84,12 @@ const AdminAllOrders = () => {
                   Order #{order._id.slice(-6).toUpperCase()}
                 </h3>
                 <span
-                  className={`px-3 py-1 text-sm rounded-full font-medium ${
-                    order.status === "Pending"
+                  className={`px-3 py-1 text-sm rounded-full font-medium ${order.status === "Pending"
                       ? "bg-yellow-100 text-yellow-700"
                       : order.status === "Delivered"
-                      ? "bg-green-100 text-green-700"
-                      : "bg-blue-100 text-blue-700"
-                  }`}
+                        ? "bg-green-100 text-green-700"
+                        : "bg-blue-100 text-blue-700"
+                    }`}
                 >
                   {order.status}
                 </span>

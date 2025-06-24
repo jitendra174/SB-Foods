@@ -10,16 +10,21 @@ const AdminOrders = () => {
     setLoading(true);
     try {
       const token = sessionStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/orders", {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders`, {
         headers: { Authorization: `Bearer ${token}` },
       });
+
       const data = await res.json();
-      if (res.ok) setOrders(data);
-      else toast.error(data.message || "Failed to fetch orders");
+      if (res.ok) {
+        setOrders(data);
+      } else {
+        toast.error(data.message || "Failed to fetch orders");
+      }
     } catch (err) {
       toast.error("Error fetching orders");
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   const handleStatusUpdate = async (orderId, newStatus) => {
@@ -28,7 +33,7 @@ const AdminOrders = () => {
     setUpdatingOrderId(orderId);
     try {
       const token = sessionStorage.getItem("token");
-      const res = await fetch(`http://localhost:5000/api/orders/${orderId}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders/${orderId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -41,14 +46,15 @@ const AdminOrders = () => {
 
       if (res.ok) {
         toast.success("Order status updated");
-        fetchOrders(); 
+        fetchOrders(); // Refresh list after status update
       } else {
         toast.error(data.message || "Failed to update status");
       }
     } catch (err) {
       toast.error("Server error");
+    } finally {
+      setUpdatingOrderId(null);
     }
-    setUpdatingOrderId(null);
   };
 
   useEffect(() => {
@@ -56,14 +62,15 @@ const AdminOrders = () => {
   }, []);
 
   return (
-    <div>
-      <h2 className="text-3xl font-bold mb-6 text-gray-800">📦 All User Orders</h2>
+    <div className="min-h-screen bg-white px-4 py-10 max-w-6xl mx-auto">
+      <h2 className="text-3xl font-bold mb-6 text-primary text-center">📦 All User Orders</h2>
+
       {loading ? (
-        <p className="text-gray-500">Loading...</p>
+        <p className="text-gray-500 text-center">Loading orders...</p>
       ) : orders.length === 0 ? (
-        <p className="text-gray-500">No orders found.</p>
+        <p className="text-gray-500 text-center">No orders found.</p>
       ) : (
-        <div className="space-y-5">
+        <div className="space-y-6">
           {orders.map((order) => (
             <div key={order._id} className="border p-5 rounded-lg shadow-sm bg-white">
               <div className="flex justify-between items-center">
@@ -71,7 +78,7 @@ const AdminOrders = () => {
                   Order #{order._id.slice(-6).toUpperCase()}
                 </h4>
                 <span
-                  className={`px-2 py-1 text-sm rounded-full ${
+                  className={`px-2 py-1 text-sm rounded-full font-medium ${
                     order.status === "Pending"
                       ? "bg-yellow-100 text-yellow-700"
                       : order.status === "Delivered"
@@ -83,8 +90,8 @@ const AdminOrders = () => {
                 </span>
               </div>
 
-              <p className="text-sm text-gray-600">
-                🧍 {order.userId?.name || "User"} ({order.userId?.email})
+              <p className="text-sm text-gray-600 mt-1">
+                🧍 {order.userId?.name || "User"} ({order.userId?.email || "N/A"})
               </p>
               <p className="text-sm text-gray-500">
                 📅 {new Date(order.createdAt).toLocaleString()}
@@ -98,13 +105,14 @@ const AdminOrders = () => {
                 ))}
               </ul>
 
-              <div className="mt-3 flex justify-between items-center">
-                <p className="text-primary font-semibold text-lg">
-                  ₹{order.totalAmount}
+              <div className="mt-4 flex justify-between items-center">
+                <p className="text-lg font-semibold text-primary">
+                  ₹{order.totalAmount.toFixed(2)}
                 </p>
-                <div className="flex gap-2">
-                  {order.status !== "Delivered" && (
-                    <>
+
+                {order.status !== "Delivered" && (
+                  <div className="flex gap-2">
+                    {order.status !== "Preparing" && (
                       <button
                         onClick={() => handleStatusUpdate(order._id, "Preparing")}
                         disabled={updatingOrderId === order._id}
@@ -112,16 +120,16 @@ const AdminOrders = () => {
                       >
                         Preparing
                       </button>
-                      <button
-                        onClick={() => handleStatusUpdate(order._id, "Delivered")}
-                        disabled={updatingOrderId === order._id}
-                        className="px-4 py-1 text-sm bg-green-100 text-green-700 rounded"
-                      >
-                        Mark Delivered
-                      </button>
-                    </>
-                  )}
-                </div>
+                    )}
+                    <button
+                      onClick={() => handleStatusUpdate(order._id, "Delivered")}
+                      disabled={updatingOrderId === order._id}
+                      className="px-4 py-1 text-sm bg-green-100 text-green-700 rounded"
+                    >
+                      Mark Delivered
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           ))}

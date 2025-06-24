@@ -11,11 +11,12 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/restaurants?limit=4")
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/restaurants?limit=4`)
       .then((res) => res.json())
       .then((data) => setFeaturedRestaurants(data))
       .catch((err) => console.error("Error fetching featured restaurants", err));
   }, []);
+
 
   return (
     <div className="min-h-screen bg-orange-50 text-orange-900 font-sans">

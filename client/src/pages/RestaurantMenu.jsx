@@ -18,7 +18,7 @@ const RestaurantMenu = () => {
   useEffect(() => {
     const fetchRestaurant = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/restaurants/${id}`);
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/restaurants/${id}`);
         const data = await res.json();
         setRestaurant(data);
         setMenuItems(data.menu || []);
