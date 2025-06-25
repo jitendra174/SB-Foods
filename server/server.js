@@ -14,12 +14,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
-// ✅ Fix CORS
 app.use(
   cors({
-    origin: ["https://sb-foods-frontend.onrender.com"],
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    origin:allowedOrigins,
     credentials: true,
   })
 );
