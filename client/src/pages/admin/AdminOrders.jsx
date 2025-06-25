@@ -35,7 +35,7 @@ const AdminOrders = () => {
     try {
       const token = sessionStorage.getItem("token");
       const res = await fetch(
-        `${import.meta.env.VITE_API_BASE_URL}/api/admin/orders/${orderId}`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/orders/admin/orders/${orderId}`,
         {
           method: "PATCH",
           headers: {
