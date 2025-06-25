@@ -2,6 +2,8 @@ import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
 const SECRET = process.env.JWT_SECRET;
+console.log("🧪 JWT_SECRET from ENV:", SECRET);
+
 
 // Middleware to protect user routes
 export const protectUser = async (req, res, next) => {
