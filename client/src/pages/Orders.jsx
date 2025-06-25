@@ -7,12 +7,10 @@ import { useAuth } from "../context/AuthContext";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const navigate = useNavigate();
-  const { isAdmin } = useAuth();
+  const { isAdmin, token } = useAuth();
 
   useEffect(() => {
     const fetchOrders = async () => {
-      const token = localStorage.getItem("token");
-
       if (!token) {
         toast.error("Please login to view your orders");
         return navigate("/login");
@@ -24,22 +22,17 @@ const Orders = () => {
       }
 
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders`, {
-          method: "POST",
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders/me`, {
+          method: "GET",
           headers: {
-            "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`,
           },
-          body: JSON.stringify({
-            items: cart,
-            totalAmount: totalPrice,
-          }),
         });
 
         const data = await res.json();
 
         if (res.ok) {
-          setOrders(data);
+          setOrders(data.orders || data); 
         } else {
           toast.error(data.message || "Failed to load orders");
         }
@@ -49,7 +42,7 @@ const Orders = () => {
     };
 
     fetchOrders();
-  }, [navigate, isAdmin]);
+  }, [navigate, isAdmin, token]);
 
   return (
     <div className="min-h-screen bg-white px-4 py-10 max-w-6xl mx-auto">
@@ -75,10 +68,10 @@ const Orders = () => {
                 </h3>
                 <span
                   className={`px-3 py-1 text-sm rounded-full font-medium ${order.status === "Pending"
-                      ? "bg-yellow-100 text-yellow-700"
-                      : order.status === "Delivered"
-                        ? "bg-green-100 text-green-700"
-                        : "bg-blue-100 text-blue-700"
+                    ? "bg-yellow-100 text-yellow-700"
+                    : order.status === "Delivered"
+                      ? "bg-green-100 text-green-700"
+                      : "bg-blue-100 text-blue-700"
                     }`}
                 >
                   {order.status}
@@ -90,8 +83,8 @@ const Orders = () => {
               </p>
 
               <ul className="space-y-1 text-sm text-gray-700 mb-3">
-                {order.items.map((item) => (
-                  <li key={item._id}>
+                {order.items.map((item, idx) => (
+                  <li key={idx}>
                     🍽 {item.name} × {item.quantity}
                   </li>
                 ))}
