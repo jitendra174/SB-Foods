@@ -14,7 +14,16 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
-app.use(cors()); 
+// ✅ Fix CORS
+app.use(
+  cors({
+    origin: ["https://sb-foods-frontend.onrender.com"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -30,13 +39,16 @@ app.use((req, res) => {
   res.status(404).json({ message: 'API route not found' });
 });
 
-mongoose.set("strictQuery", false);
+mongoose.set('strictQuery', false);
 mongoose
-  .connect(MONGO_URI, {})
+  .connect(MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log('✅ Connected to MongoDB successfully');
     app.listen(PORT, () => {
-      console.log(`🚀 Server running at: http://localhost:${PORT}`);
+      console.log(`🚀 Server running on port ${PORT}`);
     });
   })
   .catch((err) => {

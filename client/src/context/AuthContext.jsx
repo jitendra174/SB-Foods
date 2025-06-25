@@ -5,7 +5,15 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
-  const [token, setToken] = useState(sessionStorage.getItem("token"));
+  const [token, setToken] = useState(null);
+
+
+  useEffect(() => {
+    const storedToken = sessionStorage.getItem("token");
+    if (storedToken && !token) {
+      setToken(storedToken);
+    }
+  }, []);
 
   const fetchUser = async () => {
     if (!token) return;
@@ -23,7 +31,7 @@ export const AuthProvider = ({ children }) => {
         setUser(data.user);
         setIsAdmin(data.isAdmin || false);
       } else {
-        console.warn("⚠️ Invalid or expired token:", data.message);
+        console.warn("⚠️ Token expired or invalid:", data.message);
         handleLogout();
       }
     } catch (err) {
@@ -37,15 +45,19 @@ export const AuthProvider = ({ children }) => {
     setToken(newToken);
   };
 
+
   const handleLogout = () => {
     sessionStorage.removeItem("token");
+    setToken(null);
     setUser(null);
     setIsAdmin(false);
-    setToken(null);
   };
 
+
   useEffect(() => {
-    fetchUser();
+    if (token) {
+      fetchUser();
+    }
   }, [token]);
 
   return (
@@ -53,6 +65,7 @@ export const AuthProvider = ({ children }) => {
       value={{
         user,
         isAdmin,
+        token,
         login,
         logout: handleLogout,
         setUser,

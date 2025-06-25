@@ -11,7 +11,7 @@ const Orders = () => {
 
   useEffect(() => {
     const fetchOrders = async () => {
-      const token = sessionStorage.getItem("token");
+      const token = localStorage.getItem("token");
 
       if (!token) {
         toast.error("Please login to view your orders");
@@ -25,9 +25,15 @@ const Orders = () => {
 
       try {
         const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders`, {
+          method: "POST",
           headers: {
-            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`,
           },
+          body: JSON.stringify({
+            items: cart,
+            totalAmount: totalPrice,
+          }),
         });
 
         const data = await res.json();
@@ -68,13 +74,12 @@ const Orders = () => {
                   Order #{order._id.slice(-6).toUpperCase()}
                 </h3>
                 <span
-                  className={`px-3 py-1 text-sm rounded-full font-medium ${
-                    order.status === "Pending"
+                  className={`px-3 py-1 text-sm rounded-full font-medium ${order.status === "Pending"
                       ? "bg-yellow-100 text-yellow-700"
                       : order.status === "Delivered"
-                      ? "bg-green-100 text-green-700"
-                      : "bg-blue-100 text-blue-700"
-                  }`}
+                        ? "bg-green-100 text-green-700"
+                        : "bg-blue-100 text-blue-700"
+                    }`}
                 >
                   {order.status}
                 </span>

@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useCart } from "../context/CartContext";
+import { useAuth } from "../context/AuthContext";
 import toast from "react-hot-toast";
 
 const Cart = () => {
   const { cart, removeFromCart, increaseQty, decreaseQty, clearCart } = useCart();
+  const { token } = useAuth();
   const navigate = useNavigate();
   const [placingOrder, setPlacingOrder] = useState(false);
 
@@ -14,7 +16,8 @@ const Cart = () => {
   const handlePlaceOrder = async () => {
     if (placingOrder) return;
 
-    const token = sessionStorage.getItem("token");
+    console.log("TOKEN:", token);
+
     if (!token) {
       toast.error("You must be logged in to place an order");
       return navigate("/login");
@@ -49,6 +52,7 @@ const Cart = () => {
       }
     } catch (err) {
       toast.error("Something went wrong");
+      console.error("Order error:", err);
     } finally {
       setPlacingOrder(false);
     }
@@ -125,9 +129,8 @@ const Cart = () => {
             <button
               onClick={handlePlaceOrder}
               disabled={placingOrder}
-              className={`bg-green-500 text-white px-6 py-3 rounded-full font-medium transition ${
-                placingOrder ? "opacity-50 cursor-not-allowed" : "hover:bg-green-600"
-              }`}
+              className={`bg-green-500 text-white px-6 py-3 rounded-full font-medium transition ${placingOrder ? "opacity-50 cursor-not-allowed" : "hover:bg-green-600"
+                }`}
             >
               ✅ {placingOrder ? "Placing..." : "Place Order"}
             </button>

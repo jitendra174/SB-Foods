@@ -10,10 +10,12 @@ const AdminOrders = () => {
     setLoading(true);
     try {
       const token = sessionStorage.getItem("token");
-      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-
+      const res = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/api/admin/orders`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       const data = await res.json();
       if (res.ok) {
         setOrders(data);
@@ -29,24 +31,24 @@ const AdminOrders = () => {
 
   const handleStatusUpdate = async (orderId, newStatus) => {
     if (!window.confirm(`Are you sure you want to mark this as "${newStatus}"?`)) return;
-
     setUpdatingOrderId(orderId);
     try {
       const token = sessionStorage.getItem("token");
-      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orders/${orderId}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ status: newStatus }),
-      });
-
+      const res = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/api/admin/orders/${orderId}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ status: newStatus }),
+        }
+      );
       const data = await res.json();
-
       if (res.ok) {
         toast.success("Order status updated");
-        await fetchOrders(); 
+        await fetchOrders();
       } else {
         toast.error(data.message || "Failed to update status");
       }
@@ -66,7 +68,6 @@ const AdminOrders = () => {
       <h2 className="text-3xl font-bold mb-6 text-red-600 text-center">
         📦 All User Orders
       </h2>
-
       {loading ? (
         <p className="text-gray-500 text-center">Loading orders...</p>
       ) : orders.length === 0 ? (
@@ -91,30 +92,23 @@ const AdminOrders = () => {
                   {order.status}
                 </span>
               </div>
-
               <p className="text-sm text-gray-600 mt-1">
                 🧍 {order.userId?.name || "Unknown User"} ({order.userId?.email || "N/A"})
               </p>
               <p className="text-sm text-gray-500">
-                📅{" "}
-                {order.createdAt
-                  ? new Date(order.createdAt).toLocaleString()
-                  : "Date Unavailable"}
+                📅 {order.createdAt ? new Date(order.createdAt).toLocaleString() : "Date Unavailable"}
               </p>
-
               <ul className="mt-3 text-sm list-disc list-inside text-gray-700">
-                {order.items.map((item) => (
-                  <li key={item._id}>
+                {(order.items || []).map((item) => (
+                  <li key={item._id || item.name}>
                     🍽 {item.name} × {item.quantity}
                   </li>
                 ))}
               </ul>
-
               <div className="mt-4 flex justify-between items-center">
                 <p className="text-lg font-semibold text-red-600">
                   ₹{order.totalAmount?.toFixed(2) || "0.00"}
                 </p>
-
                 {order.status !== "Delivered" && (
                   <div className="flex gap-2">
                     {order.status !== "Preparing" && (
