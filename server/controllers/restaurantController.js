@@ -3,7 +3,7 @@ import Restaurant from '../models/restaurantModel.js';
 
 export const getAllRestaurants = async (req, res) => {
   try {
-    const limit = parseInt(req.query.limit) || 0;
+    const limit = parseInt(req.query.limit) || 20;
     const restaurants = await Restaurant.find().limit(limit);
     res.json(restaurants);
   } catch (error) {

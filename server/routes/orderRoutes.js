@@ -5,6 +5,7 @@ import {
   getAllOrders,
   updateOrderStatus
 } from '../controllers/orderController.js';
+import { verifyUser } from '../middlewares/authMiddleware.js';
 
 import {
   protectUser,
@@ -15,7 +16,8 @@ const router = express.Router();
 
 // 🛒 User routes
 router.post('/', protectUser, placeOrder);              
-router.get('/me', protectUser, getUserOrders);          
+router.get('/me', protectUser, getUserOrders);
+router.get('/', verifyUser, getUserOrders);          
 
 // 🧑‍💼 Admin routes
 router.get('/', protectAdmin, getAllOrders);            
