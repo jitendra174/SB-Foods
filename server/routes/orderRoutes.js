@@ -14,15 +14,12 @@ import Order from '../models/Order.js';
 
 const router = express.Router();
 
-// 🛒 User Routes
 router.post('/', protectUser, placeOrder);
 router.get('/me', protectUser, getUserOrders);
 
-// 🧑‍💼 Admin Routes
 router.get('/admin', protectAdmin, getAllOrders);
 router.patch('/:id', protectAdmin, updateOrderStatus);
 
-// ✅ Admin: Get order by ID
 router.get('/admin/orders/:id', protectAdmin, async (req, res) => {
   try {
     const order = await Order.findById(req.params.id);
