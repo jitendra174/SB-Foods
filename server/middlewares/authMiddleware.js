@@ -1,8 +1,7 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
-const SECRET = 'secretkey123'; 
-
+const SECRET = process.env.JWT_SECRET;
 
 export const protectUser = async (req, res, next) => {
   const token = req.headers.authorization?.split(" ")[1];
@@ -14,7 +13,6 @@ export const protectUser = async (req, res, next) => {
   try {
     const decoded = jwt.verify(token, SECRET);
 
-
     if (decoded.role === 'admin') {
       return res.status(403).json({ message: "Admins are not allowed to access user routes" });
     }
@@ -25,10 +23,9 @@ export const protectUser = async (req, res, next) => {
       return res.status(401).json({ message: "User not found" });
     }
 
-    req.user = { id: user._id }; 
+    req.user = { id: user._id };
     next();
   } catch (err) {
-    console.error('❌ User token error:', err.message);
     res.status(401).json({ message: "Invalid or expired user token" });
   }
 };
@@ -41,16 +38,15 @@ export const protectAdmin = async (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, SECRET); 
+    const decoded = jwt.verify(token, SECRET);
 
     if (decoded.role !== 'admin') {
       return res.status(403).json({ message: "Access denied. Admins only." });
     }
 
-    req.admin = { role: 'admin' }; 
+    req.admin = { role: 'admin' };
     next();
   } catch (err) {
-    console.error('❌ Admin token error:', err.message);
     res.status(401).json({ message: "Invalid or expired admin token" });
   }
 };
@@ -65,7 +61,7 @@ export const verifyUser = async (req, res, next) => {
   const token = authHeader.split(" ")[1];
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, SECRET);
     const user = await User.findById(decoded.id).select("-password");
 
     if (!user) {
@@ -75,6 +71,6 @@ export const verifyUser = async (req, res, next) => {
     req.user = user;
     next();
   } catch (err) {
-    return res.status(401).json({ message: "Token invalid" });
+    res.status(401).json({ message: "Token invalid" });
   }
 };

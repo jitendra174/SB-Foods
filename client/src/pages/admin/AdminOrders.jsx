@@ -46,7 +46,7 @@ const AdminOrders = () => {
 
       if (res.ok) {
         toast.success("Order status updated");
-        await fetchOrders(); // Refresh orders list
+        await fetchOrders(); 
       } else {
         toast.error(data.message || "Failed to update status");
       }
