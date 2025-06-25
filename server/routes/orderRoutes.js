@@ -22,19 +22,16 @@ router.get('/me', protectUser, getUserOrders);
 router.get('/admin', protectAdmin, getAllOrders);
 router.patch('/:id', protectAdmin, updateOrderStatus);
 
-router.get('/admin/orders/:id', protectAdmin, async (req, res) => {
+// ✅ Admin: Get order by ID
+router.get('/admin/:id', protectAdmin, async (req, res) => {
   try {
-    const orderId = req.params.id;
-    const order = await Order.findById(orderId);
-
-    if (!order) {
-      return res.status(404).json({ message: "Order not found" });
-    }
+    const order = await Order.findById(req.params.id);
+    if (!order) return res.status(404).json({ message: "Order not found" });
 
     res.json(order);
   } catch (err) {
     console.error("❌ Error fetching order by ID:", err);
-    res.status(500).json({ message: "Server error while fetching order" });
+    res.status(500).json({ message: "Server error" });
   }
 });
 
