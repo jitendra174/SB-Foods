@@ -4,7 +4,7 @@ import User from '../models/User.js';
 
 const ADMIN_EMAIL = 'admin@sbfoods.com';
 const ADMIN_PASSWORD = 'admin123';
-const SECRET = 'secretkey123'; 
+const SECRET = process.env.JWT_SECRET; 
 
 
 export const adminLogin = async (req, res) => {
