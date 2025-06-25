@@ -5,22 +5,20 @@ import {
   getAllOrders,
   updateOrderStatus
 } from '../controllers/orderController.js';
-import { verifyUser } from '../middlewares/authMiddleware.js';
-
 import {
+  verifyUser,
   protectUser,
   protectAdmin
-} from '../middleware/authMiddleware.js';
+} from '../middlewares/authMiddleware.js';
 
 const router = express.Router();
 
-// 🛒 User routes
+// 🛒 User Routes
 router.post('/', protectUser, placeOrder);              
 router.get('/me', protectUser, getUserOrders);
-router.get('/', verifyUser, getUserOrders);          
 
-// 🧑‍💼 Admin routes
-router.get('/', protectAdmin, getAllOrders);            
+// 🧑‍💼 Admin Routes
+router.get('/admin', protectAdmin, getAllOrders);           
 router.patch('/:id', protectAdmin, updateOrderStatus); 
 
 export default router;
