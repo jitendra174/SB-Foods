@@ -82,7 +82,6 @@ const RestaurantMenu = () => {
           />
         </div>
 
-        {/* 🍽 Menu Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {filteredItems.length === 0 ? (
             <p className="text-center col-span-full text-gray-500">
