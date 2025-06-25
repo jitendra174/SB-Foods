@@ -1,15 +1,12 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-
 const AuthContext = createContext();
-
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
-  const [token, setToken] = useState(sessionStorage.getItem("token") || null);
+  const [token, setToken] = useState(sessionStorage.getItem("token"));
 
- 
   const fetchUser = async () => {
     if (!token) return;
 
@@ -26,16 +23,20 @@ export const AuthProvider = ({ children }) => {
         setUser(data.user);
         setIsAdmin(data.isAdmin || false);
       } else {
-        console.warn("⚠️ Invalid token:", data.message);
+        console.warn("⚠️ Invalid or expired token:", data.message);
         handleLogout();
       }
     } catch (err) {
-      console.error("❌ Auth fetch error:", err.message);
+      console.error("❌ Failed to fetch user:", err.message);
       handleLogout();
     }
   };
 
- 
+  const login = (newToken) => {
+    sessionStorage.setItem("token", newToken);
+    setToken(newToken);
+  };
+
   const handleLogout = () => {
     sessionStorage.removeItem("token");
     setUser(null);
@@ -43,13 +44,6 @@ export const AuthProvider = ({ children }) => {
     setToken(null);
   };
 
-
-  const login = (newToken) => {
-    sessionStorage.setItem("token", newToken);
-    setToken(newToken);
-  };
-
- 
   useEffect(() => {
     fetchUser();
   }, [token]);
@@ -69,6 +63,5 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-
 
 export const useAuth = () => useContext(AuthContext);

@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const fadeInUp = {
@@ -13,7 +18,7 @@ const fadeInUp = {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1f1f1f] text-orange-50 mt-16 select-none font-sans">
+    <footer className="bg-[#1f1f1f] text-orange-50 mt-16 font-sans">
       <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Brand Info */}
         <motion.div
@@ -28,8 +33,9 @@ export default function Footer() {
             SB Foods
           </h3>
           <p className="text-orange-200 leading-relaxed font-light">
-            <span className="italic">OrderOnTheGo</span> — Your ultimate food ordering solution.
-            Delicious food, delivered fast and fresh at your doorstep.
+            <span className="italic">OrderOnTheGo</span> — Your ultimate food
+            ordering solution. Delicious food, delivered fast and fresh at your
+            doorstep.
           </p>
         </motion.div>
 
@@ -54,7 +60,7 @@ export default function Footer() {
               <li key={link.name}>
                 <Link
                   to={link.to}
-                  className="hover:text-orange-400 transition-colors duration-300"
+                  className="hover:text-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded transition-colors duration-300"
                 >
                   {link.name}
                 </Link>
@@ -150,7 +156,7 @@ export default function Footer() {
         </motion.div>
       </div>
 
-      {/* Bottom Section */}
+      {/* Bottom Text */}
       <motion.div
         className="mt-10 border-t border-orange-600 py-6 text-center text-orange-400 text-sm"
         initial={{ opacity: 0 }}

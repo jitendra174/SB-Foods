@@ -29,7 +29,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    setOpen(false);
+    setOpen(false); // Close dropdown when route changes
   }, [location.pathname]);
 
   const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
@@ -45,9 +45,9 @@ const Navbar = () => {
         🍽️ SB Foods
       </Link>
 
-      {/* Nav Links */}
+      {/* Navigation Links */}
       <div className="hidden md:flex items-center space-x-10 font-semibold text-gray-700">
-        {["/", "/restaurants", "/about", "/contact"].map((path, idx) => {
+        {["/", "/restaurants", "/about", "/contact"].map((path) => {
           const name = path === "/" ? "Home" : path.slice(1).charAt(0).toUpperCase() + path.slice(2);
           return (
             <NavLink
@@ -65,9 +65,9 @@ const Navbar = () => {
         })}
       </div>
 
-      {/* Right Side: Cart + Avatar */}
+      {/* Cart + User Avatar */}
       <div className="flex items-center space-x-8 relative">
-        {/* Cart */}
+        {/* Cart Icon */}
         <div
           className="relative cursor-pointer"
           onClick={() => navigate("/cart")}
@@ -91,7 +91,7 @@ const Navbar = () => {
           </AnimatePresence>
         </div>
 
-        {/* Avatar Dropdown */}
+        {/* Avatar Menu */}
         <div className="relative" ref={menuRef}>
           <button
             onClick={() => setOpen((prev) => !prev)}
@@ -108,6 +108,7 @@ const Navbar = () => {
             )}
           </button>
 
+          {/* Dropdown */}
           <AnimatePresence>
             {open && (
               <motion.div
