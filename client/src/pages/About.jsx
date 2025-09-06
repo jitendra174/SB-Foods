@@ -20,7 +20,7 @@ const About = () => {
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="px-6 text-white">
             <h1 className="text-3xl sm:text-5xl font-bold mb-4">
-              Serving Happiness, One Bite at a Time 🍴
+              Serving Happiness, One Bite at a Time
             </h1>
             <p className="text-lg max-w-2xl mx-auto">
               Discover local flavors, order with ease, and enjoy fast delivery — anytime, anywhere.
@@ -37,7 +37,7 @@ const About = () => {
         transition={{ duration: 0.5 }}
         className="mb-16"
       >
-        <h2 className="text-2xl font-bold mb-4 text-orange-500">🚀 Our Mission</h2>
+        <h2 className="text-2xl font-bold mb-4 text-orange-500"> Our Mission</h2>
         <p className="text-gray-700 leading-relaxed max-w-4xl">
           We believe food brings people together. Our mission is to simplify your food journey — from discovery to doorstep —
           by partnering with passionate restaurants and delivering authentic flavors fast, safe, and fresh.
@@ -105,7 +105,7 @@ const About = () => {
           onClick={() => navigate("/restaurants")}
           className="bg-primary hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium transition"
         >
-          🍔 View All Restaurants
+          View All Restaurants
         </button>
       </motion.div>
     </div>

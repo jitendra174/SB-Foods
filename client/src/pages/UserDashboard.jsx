@@ -6,7 +6,7 @@ const UserDashboard = () => {
   return (
     <div className="p-6 max-w-4xl mx-auto min-h-[80vh]">
       <h2 className="text-3xl font-bold text-center text-red-600 mb-10">
-        🧑‍🍳 User Dashboard
+        User Dashboard
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

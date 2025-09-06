@@ -14,7 +14,7 @@ const Profile = () => {
         className="bg-white w-full max-w-md rounded-2xl shadow-xl p-8 border border-gray-100"
       >
         <h1 className="text-3xl font-bold text-center text-primary mb-6">
-          👤 My Profile
+          My Profile
         </h1>
 
         {user ? (

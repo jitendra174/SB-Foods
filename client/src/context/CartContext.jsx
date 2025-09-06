@@ -1,17 +1,16 @@
 import React, { createContext, useContext, useReducer, useEffect } from "react";
 
-// Get initial cart from sessionStorage or fallback to empty
 const getInitialCart = () => {
   const storedCart = sessionStorage.getItem("cart");
   return storedCart ? JSON.parse(storedCart) : [];
 };
 
-// Initial state
+
 const initialState = {
   cart: getInitialCart(),
 };
 
-// Reducer function
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD": {
@@ -62,19 +61,19 @@ const reducer = (state, action) => {
   }
 };
 
-// Create Context
+
 const CartContext = createContext();
 
-// Provider Component
+
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  // Persist cart to sessionStorage
+
   useEffect(() => {
     sessionStorage.setItem("cart", JSON.stringify(state.cart));
   }, [state.cart]);
 
-  // Cart actions
+  
   const addToCart = item => dispatch({ type: "ADD", payload: item });
   const removeFromCart = id => dispatch({ type: "REMOVE", payload: id });
   const increaseQty = id => dispatch({ type: "INCREASE", payload: id });
@@ -97,5 +96,5 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// Custom hook
+
 export const useCart = () => useContext(CartContext);

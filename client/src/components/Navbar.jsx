@@ -29,7 +29,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    setOpen(false); // Close dropdown when route changes
+    setOpen(false);
   }, [location.pathname]);
 
   const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
@@ -42,7 +42,7 @@ const Navbar = () => {
         className="text-3xl font-extrabold text-orange-600 hover:text-orange-700 transition-colors duration-200"
         aria-label="SB Foods Home"
       >
-        🍽️ SB Foods
+        SB Foods
       </Link>
 
       {/* Navigation Links */}
@@ -134,21 +134,21 @@ const Navbar = () => {
                       className="block px-4 py-3 hover:bg-orange-50 transition"
                       onClick={() => setOpen(false)}
                     >
-                      👤 Profile
+                      Profile
                     </Link>
                     <Link
                       to="/orders"
                       className="block px-4 py-3 hover:bg-orange-50 transition"
                       onClick={() => setOpen(false)}
                     >
-                      🧾 Orders
+                      Orders
                     </Link>
                     <Link
                       to="/settings"
                       className="block px-4 py-3 hover:bg-orange-50 transition"
                       onClick={() => setOpen(false)}
                     >
-                      ⚙️ Settings
+                      Settings
                     </Link>
                     {isAdmin && (
                       <Link
@@ -156,7 +156,7 @@ const Navbar = () => {
                         className="block px-4 py-3 hover:bg-orange-50 transition"
                         onClick={() => setOpen(false)}
                       >
-                        📊 Dashboard
+                        Dashboard
                       </Link>
                     )}
                     <button

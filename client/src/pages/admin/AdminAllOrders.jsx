@@ -74,7 +74,7 @@ const AdminAllOrders = () => {
 
   return (
     <div className="min-h-screen p-6 max-w-6xl mx-auto bg-white">
-      <h2 className="text-3xl font-bold text-primary text-center mb-6">📋 All Orders</h2>
+      <h2 className="text-3xl font-bold text-primary text-center mb-6">All Orders</h2>
 
       {orders.length === 0 ? (
         <p className="text-center text-gray-500">No orders found.</p>

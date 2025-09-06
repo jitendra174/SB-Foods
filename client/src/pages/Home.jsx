@@ -28,7 +28,7 @@ const Home = () => {
         transition={{ duration: 0.6 }}
         className="text-center py-5 bg-gradient-to-r from-orange-400 to-orange-600 text-white font-semibold text-lg tracking-wide shadow-md"
       >
-        👋 Welcome to <span className="font-bold">SB Foods – OrderOnTheGo</span>
+        Welcome to <span className="font-bold">SB Foods – OrderOnTheGo</span>
       </motion.div>
 
       {/* Hero Section */}
@@ -40,8 +40,8 @@ const Home = () => {
             Hungry? <br /> Order from SB Foods in minutes!
           </h1>
           <p className="text-lg md:text-xl font-semibold text-orange-700 mb-10 tracking-wide">
-            🍔 <span className="font-bold">24/7 availability</span> · 🚀{" "}
-            <span className="font-bold">Superfast 10-minute delivery</span> · 🍽️{" "}
+            <span className="font-bold">24/7 availability</span> · {" "}
+            <span className="font-bold">Superfast 10-minute delivery</span> · {" "}
             <span className="font-bold">500+ restaurants</span>
           </p>
           <button
@@ -74,7 +74,7 @@ const Home = () => {
             key={name}
             whileHover={{ scale: 1.15 }}
             className="flex flex-col items-center cursor-pointer"
-            title={name}  
+            title={name}
             onClick={() =>
               navigate({
                 pathname: "/restaurants",
@@ -93,7 +93,7 @@ const Home = () => {
       {/* Featured Restaurants */}
       <section className="py-20 px-10 sm:px-20 bg-orange-200 max-w-7xl mx-auto rounded-xl shadow-lg">
         <h2 className="text-4xl font-extrabold text-orange-800 mb-16 text-center tracking-wider">
-          🌟 Featured Restaurants
+          Featured Restaurants
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
@@ -151,24 +151,24 @@ const Home = () => {
       {/* Why Choose SB Foods */}
       <section className="py-24 px-10 sm:px-20 bg-orange-100 max-w-7xl mx-auto rounded-xl shadow-lg mt-24">
         <h2 className="text-4xl font-extrabold text-orange-900 mb-16 text-center tracking-widest">
-          🧑‍🍳 Why Choose SB Foods?
+          Why Choose SB Foods?
         </h2>
 
         <div className="grid md:grid-cols-3 gap-16 text-left text-orange-900">
           <div>
-            <h3 className="text-2xl font-bold mb-3">🚀 Instant Delivery</h3>
+            <h3 className="text-2xl font-bold mb-3"> Instant Delivery</h3>
             <p className="text-lg font-medium text-orange-700">
               Get your food delivered in just 10 minutes!
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-bold mb-3">🏆 Top Restaurants</h3>
+            <h3 className="text-2xl font-bold mb-3"> Top Restaurants</h3>
             <p className="text-lg font-medium text-orange-700">
               We partner with the best restaurants in town.
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-bold mb-3">🔐 Secure Payments</h3>
+            <h3 className="text-2xl font-bold mb-3">Secure Payments</h3>
             <p className="text-lg font-medium text-orange-700">
               Pay safely using cards, UPI, or wallets.
             </p>
@@ -179,7 +179,7 @@ const Home = () => {
       {/* Order in 3 Steps */}
       <section className="py-24 px-10 sm:px-20 bg-orange-200 max-w-7xl mx-auto rounded-xl shadow-lg mt-24">
         <h2 className="text-4xl font-extrabold text-orange-900 mb-16 text-center tracking-widest">
-          📍 Order in 3 Easy Steps
+          Order in 3 Easy Steps
         </h2>
 
         <div className="grid md:grid-cols-3 gap-16 text-orange-900">
@@ -212,26 +212,26 @@ const Home = () => {
       {/* Festive Offers */}
       <section className="py-24 px-10 sm:px-20 bg-orange-100 max-w-7xl mx-auto rounded-xl shadow-lg mt-24 mb-24">
         <h2 className="text-4xl font-extrabold text-orange-900 mb-16 text-center tracking-widest">
-          🎉 Festive Offers
+          Festive Offers
         </h2>
 
         <div className="grid md:grid-cols-3 gap-16">
           <div className="bg-orange-200 border-l-8 border-orange-600 p-8 rounded-xl shadow-md hover:shadow-lg transition">
-            <h3 className="text-2xl font-bold text-orange-700 mb-4">🔥 Flat 50% on First Order</h3>
+            <h3 className="text-2xl font-bold text-orange-700 mb-4"> Flat 50% on First Order</h3>
             <p className="text-lg font-medium text-orange-800">
               Limited time only. Hurry up!
             </p>
           </div>
 
           <div className="bg-orange-200 border-l-8 border-orange-600 p-8 rounded-xl shadow-md hover:shadow-lg transition">
-            <h3 className="text-2xl font-bold text-orange-700 mb-4">🎁 Free Dessert on ₹299+</h3>
+            <h3 className="text-2xl font-bold text-orange-700 mb-4"> Free Dessert on ₹299+</h3>
             <p className="text-lg font-medium text-orange-800">
               Sweeten your meal on us.
             </p>
           </div>
 
           <div className="bg-orange-200 border-l-8 border-orange-600 p-8 rounded-xl shadow-md hover:shadow-lg transition">
-            <h3 className="text-2xl font-bold text-orange-700 mb-4">🏖️ Summer Combo @ ₹99</h3>
+            <h3 className="text-2xl font-bold text-orange-700 mb-4"> Summer Combo @ ₹99</h3>
             <p className="text-lg font-medium text-orange-800">
               Cool off with our refreshing deals.
             </p>

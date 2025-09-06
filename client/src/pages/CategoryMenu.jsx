@@ -13,7 +13,7 @@ export default function CategoryMenu() {
       transition={{ duration: 0.5 }}
     >
       <h2 className="text-3xl font-extrabold text-orange-600 mb-2">
-        🍽️ {name} Menu
+        {name} Menu
       </h2>
       <p className="text-gray-600 text-lg">
         Discover all delicious dishes in the <span className="font-semibold">{name}</span> category

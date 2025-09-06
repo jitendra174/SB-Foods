@@ -32,7 +32,7 @@ const Orders = () => {
         const data = await res.json();
 
         if (res.ok) {
-          setOrders(data.orders || data); 
+          setOrders(data.orders || data);
         } else {
           toast.error(data.message || "Failed to load orders");
         }
@@ -47,7 +47,7 @@ const Orders = () => {
   return (
     <div className="min-h-screen bg-white px-4 py-10 max-w-6xl mx-auto">
       <h2 className="text-4xl font-bold text-center text-primary mb-8">
-        🧾 Your Orders
+        Your Orders
       </h2>
 
       {orders.length === 0 ? (
@@ -85,7 +85,7 @@ const Orders = () => {
               <ul className="space-y-1 text-sm text-gray-700 mb-3">
                 {order.items.map((item, idx) => (
                   <li key={idx}>
-                    🍽 {item.name} × {item.quantity}
+                    {item.name} × {item.quantity}
                   </li>
                 ))}
               </ul>
